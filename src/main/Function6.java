@@ -33,7 +33,7 @@ public class Function6 {
 				System.out.println("Enter Y (Y>0) : ");
 				y = sc.nextDouble();
 				if(x<=0 || y<=0) {
-					System.out.println("Error !");
+					System.out.println("Error ! Please Enter the Positive Numbers Only !!");
 					continue;
 				}
 				System.out.println("B(X, Y) : "+betafucntionobejct.betaFucntion(x, y));
@@ -44,7 +44,7 @@ public class Function6 {
 					break;
 				}
 			}catch(Exception e) {
-				System.out.println("Error !");
+				System.out.println("Error ! Please Enter the valid Inputs !!");
 			}
 		}
 		
@@ -101,7 +101,11 @@ public class Function6 {
 		if(Integer.parseInt(numberArray[1]) > 0) {
 			return fractionPower(a, n); 
 		}
-		if(n == 0.0) {
+		if(n<0.0) {
+			a = 1.0/a;
+			n = n*-1;
+			return power(a,n);
+		}else if(n == 0.0) {
 			return 1.0;
 		}else if((n%2)==0.0) {
 			a = a*a;

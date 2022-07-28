@@ -62,20 +62,30 @@ public class Function6 {
 	}
 	
 	/**
-	 * Return the gamma value for the integers only by using Factorial Method
-	 * and for the Real positive numbers(R+) using the stirling approximation;
+	 * Return the gamma value for the Real positive numbers(R+) using the stirling approximation
 	 * 
+	 * @param n
+	 * @return
+	 */
+	public double decimalGammaFunction(double n) {
+		n = n - 1;
+		double firstpart = 2*PI*n;
+		double secondpart = (n/e); 
+		double result = power(firstpart,0.5)*power(secondpart,n); 
+		return result;
+	}
+	
+	/**
+	 * Return the gamma value for the integers only by using Factorial Method
+	 * 
+	 *
 	 * @param n
 	 * @return
 	 */
 	public double gammaFunction(double n) {
 		if(checkWholeNumber(n))
 			return factorial(n-1);
-		n = n - 1;
-		double firstpart = 2*PI*n;
-		double secondpart = (n/e); 
-		double result = power(firstpart,0.5)*power(secondpart,n); 
-		return result;
+		return decimalGammaFunction(n);
 	}
 	
 	/**

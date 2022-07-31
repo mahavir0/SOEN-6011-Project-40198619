@@ -1,0 +1,94 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage{comment} 
+\usepackage{fullpage}
+\usepackage[hidelinks]{hyperref}
+\usepackage{amsmath}
+\usepackage{environ}
+\usepackage{tabto,enumitem}
+
+\begin{document}
+\noindent
+\large\textbf{SOEN 6011 SEP} \hfill \textbf{Mahavir Patel} \\
+\normalsize Problem 2 \hfill \textbf{40198619} \\
+Function 6 :  $B(x,y)$ Beta Function \hfill Date: 05/07/2022 \\
+
+\section*{Assumptions}
+    \begin{enumerate}[noitemsep]
+        \item x and y are positive real numbers $x,y \in R^{+}$.
+        \item It is simpler to calculate $B(x,y)$ using the factorial for $x,y \in Z^{+}$.
+        \item If x and y are real numbers, there is no need to compute the integral function. The gamma values of the numbers may be used to derive the beta value using Stirling's approach. 
+    \end{enumerate}
+\section*{Requirements}
+\begin{enumerate}[noitemsep]
+        \item \textbf{First Requirement}
+        \begin{itemize}[noitemsep]
+            \item \textbf{ID = } FR1
+            \item\textbf{Type = } Functional Requirements
+            \item\textbf{Version = } 1.0
+            \item\textbf{Difficulty = } Easy
+            \item\textbf{Description = } The Beta function $B(x,y)$ requires $x$ and $y$ as its two variable inputs in order to operate.
+            \item\textbf{Rationalle = } $x$ and $y$ 
+        \end{itemize}
+        \item \textbf{Second Requirement}
+        \begin{itemize}
+            \item \textbf{ID = } FR2
+            \item\textbf{Type = } Functional Requirements
+            \item\textbf{Version = } 1.0
+            \item\textbf{Difficulty = } Easy
+            \item\textbf{Description = } The Beta function $B(x,y)$ requires two real positive numbers as it's defined in the $R^{+}$ domain.
+            \item\textbf{Rationalle = } $x \geq 0$ and $y \geq 0$ 
+        \end{itemize}
+        \item \textbf{Third Requirement}
+        \begin{itemize}
+            \item \textbf{ID = } FR3
+            \item\textbf{Type = } Functional Requirements
+            \item\textbf{Version = } 1.0
+            \item\textbf{Difficulty = } Easy
+            \item\textbf{Description = } The Beta Value of the function is in real positive numbers i.e $R^{+}$
+            \item\textbf{Rationalle = } $B(x,y) \geq 0$ 
+        \end{itemize}
+        
+        \newpage
+        \item \textbf{Fourth Requirement}
+        \begin{itemize}
+            \item \textbf{ID = } FR4
+            \item\textbf{Type = } Functional Requirements
+            \item\textbf{Version = } 1.0
+            \item\textbf{Difficulty = } Easy
+            \item\textbf{Description = } If the given inputs are positive integers then beta Values can be easily computed by using the Beta - Gamma Function relation.
+            \item\textbf{Rationalle = } \{ \forall x,y \in $Z^{+}$ \mid $B(x,y)$=$\frac{{\Gamma x} {\Gamma y}}{\Gamma (x+y)}$ \}
+        \end{itemize}
+        \item \textbf{Fifth Requirement}
+        \begin{itemize}
+            \item \textbf{ID = } FR5
+            \item\textbf{Type = } Functional Requirements
+            \item\textbf{Version = } 1.0
+            \item\textbf{Difficulty = } Moderate
+            \item\textbf{Description = } To calculate Beta function for large integer values, Gamma Function should be used in order to prevent stack overflow by using tail recursive function.
+            \item\textbf{Rationalle = } \{ \forall x,y \in $R^+$ \mid $B(x,y)$=$\frac{{\Gamma x} {\Gamma y}}{\Gamma (x+y)}$ where $\Gamma n = (n-1)! $ \}
+        \end{itemize}
+        
+        \item \textbf{Sixth Requirement}
+        \begin{itemize}
+            \item \textbf{ID = } FR6
+            \item\textbf{Type = } Functional Requirements
+            \item\textbf{Version = } 1.0
+            \item\textbf{Difficulty = } Difficult
+            \item\textbf{Description = } For the decimal number gamma value can be calculated using the stirlings's approximation which helps in determining the Beta value without using the integral functions.
+            \item\textbf{Rationalle = } \{ \forall x,y \in $R^{+}$ \mid $B(x,y)$=$\frac{{\Gamma x} {\Gamma y}}{\Gamma (x+y)}$ where $\Gamma n = \sqrt{2 \cdot \pi \cdot n}\cdot (\frac{n}{e})^{n}$ \} 
+        \end{itemize}
+        
+        \item \textbf{Seventh Requirement}
+        \begin{itemize}
+            \item \textbf{ID = } FR7
+            \item\textbf{Type = } Functional Requirements
+            \item\textbf{Version = } 1.0
+            \item\textbf{Difficulty = } Moderate
+            \item\textbf{Description = } There is no definition of beta values for negative or zero values. There shouldn't be any inputs besides the numeric values; x and y can be similar or different, but there shouldn't be any inputs other than the numeric values.
+            \item\textbf{Rationalle = } \{ \forall x,y \in $R^{+}$ \mid\; $x$ > $0$\; and \;$y$ > $0$, $ x = y $ or $ x \neq y $ \}
+        \end{itemize}
+        \newpage
+    \end{enumerate}
+
+
+\end{document}

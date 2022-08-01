@@ -1,5 +1,5 @@
 /**
- * 
+ * Beta Function B(x,y) Calculator.
  */
 
 package main;
@@ -7,7 +7,9 @@ package main;
 import java.util.Scanner;
 
 /**
- * @author Mahavir
+ * Beta Function Class.
+ *
+ * @author Mahavir 
  *
  */
 public class Function6 {

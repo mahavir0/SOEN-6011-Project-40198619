@@ -1,13 +1,10 @@
 /**
- * 
+ * Test Class for Function6.
  */
 package test;
 
 import static org.junit.Assert.assertThrows;
 import static org.junit.jupiter.api.Assertions.*;
-
-import java.io.ByteArrayInputStream;
-import java.io.InputStream;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
@@ -17,6 +14,8 @@ import org.junit.jupiter.api.Test;
 import main.Function6;
 
 /**
+ * Testing the Beta Function.
+ * 
  * @author Mahavir
  *
  */
@@ -49,7 +48,6 @@ class Function6Test {
 		assertNotEquals(fobject.betaFucntion(1, 1), 2);
 		assertEquals(fobject.betaFucntion(100, 1), 0.009999999999999998);
 		assertNotNull(fobject.betaFucntion(500, 500));
-//		assertEquals(fobject.betaFucntion(1000, 7458), Double.NaN);
 	}
 
 	/**

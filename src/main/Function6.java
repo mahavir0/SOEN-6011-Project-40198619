@@ -23,10 +23,10 @@ public class Function6 {
   * @param args paramters provided by command lines.
   */
   public static void main(String[] args) {
-    Function6 betafucntionobejct = new Function6();
+    
     while (true) {
       Scanner sc = new Scanner(System.in);
-      String f = "";
+      String f;
       double x;
       double y;
       System.out.println("Beta Function Calculator B(X, Y)");
@@ -39,6 +39,7 @@ public class Function6 {
           System.out.println("Error ! Please Enter the Positive Numbers Only !!");
           continue;
         }
+        Function6 betafucntionobejct = new Function6();
         System.out.println("B(X, Y) : " + betafucntionobejct.betaFucntion(x, y));
         System.out.println("Press 'Y' to continue\nPress 0 to exit .............");
         f = sc.next();
@@ -72,7 +73,7 @@ public class Function6 {
   public double decimalGammaFunction(double n) {
     n = n - 1;
     double firstpart = 2 * PI * n;
-    double secondpart = (n / e);
+    double secondpart = n / e;
     double result = power(firstpart, 0.5) * power(secondpart, n);
     return result;
   }
@@ -109,7 +110,7 @@ public class Function6 {
       return power(a, n);
     } else if (n == 0.0) {
       return 1.0;
-    } else if ((n % 2) == 0.0) {
+    } else if (n % 2 == 0.0) {
       a = a * a;
       n = n / 2;
       return power(a, n);
@@ -128,7 +129,7 @@ public class Function6 {
    */
   public double fractionPower(double a, double n) {
     double answer = 0;
-    double logvalue = 0;
+    double logvalue;
     if (n == 0) {
       return 1;
     }
@@ -141,7 +142,7 @@ public class Function6 {
       return answer;
     }
     for (int i = 0; i <= 125; i++) {
-      double numerator = power((n * logvalue), i);
+      double numerator = power(n * logvalue, i);
       double denominator = factorial(i);
       answer = answer + (numerator / denominator);
     }
@@ -160,7 +161,7 @@ public class Function6 {
    */
   public double ln(double n) {
     double answer = 0;
-    double base = (n - 1) / (n + 1);
+    final double base = (n - 1) / (n + 1);
     for (int i = 1; i <= 125; i++) {
       double exponent = 2 * i - 1;
       answer += (1 / exponent) * (power(base, exponent));

@@ -38,7 +38,7 @@ class Function6Test {
   }
   
   /**
-   * To arrage the necessary elements before the each test.
+   * To arrange the necessary elements before the each test.
    *
    * @throws java.lang.Exception If any exception occur
    */

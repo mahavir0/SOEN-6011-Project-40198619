@@ -4,6 +4,7 @@
 
 package main;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 /**
@@ -23,9 +24,9 @@ public class Function6 {
   * @param args paramters provided by command lines.
   */
   public static void main(String[] args) {
-    
+    Scanner sc = new Scanner(System.in);
     while (true) {
-      Scanner sc = new Scanner(System.in);
+      
       String f;
       double x;
       double y;
@@ -44,13 +45,17 @@ public class Function6 {
         System.out.println("Press 'Y' to continue\nPress 0 to exit .............");
         f = sc.next();
         if (f.equals("0")) {
-          sc.close();
           break;
         }
-      } catch (Exception e) {
+      } catch (InputMismatchException e) {
+        sc.next();
         System.out.println("Error ! Please Enter the valid Inputs !!");
+      } catch (Exception e) {
+        System.out.println(e.getClass());  
+        System.out.println("Fatal Error!");  
       }
     }
+    sc.close();
   }
 
   /**

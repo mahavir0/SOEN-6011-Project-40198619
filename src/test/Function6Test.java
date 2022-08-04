@@ -11,6 +11,10 @@ import static org.junit.jupiter.api.Assertions.assertNotEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+
 import main.Function6;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -160,4 +164,18 @@ class Function6Test {
     assertEquals(Double.POSITIVE_INFINITY, fobject.gammaFunction(204));
     assertEquals(Double.POSITIVE_INFINITY, fobject.gammaFunction(546.2));
   }
+  
+  /**
+   * Test case for the main class.
+   */
+  @Test
+  void testMain() {
+    System.setIn(new ByteArrayInputStream("9 9 y wasd -4 -4 -4 0 0 -3 0 0 1 3 0".getBytes()));
+    String[] args = new String[0];
+    Function6.main(args);
+    ByteArrayOutputStream actual = new ByteArrayOutputStream();
+    System.setOut(new PrintStream(actual));
+    String[] lines = actual.toString().split(System.lineSeparator()); 
+    assertNotNull(lines);
+  } 
 }

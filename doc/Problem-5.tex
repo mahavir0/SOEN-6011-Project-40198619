@@ -1,0 +1,90 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage{comment} 
+\usepackage{fullpage}
+\usepackage[hidelinks]{hyperref}
+\usepackage{amsmath}
+\usepackage{environ}
+\usepackage{graphicx}
+\usepackage{tabto,enumitem}
+
+\begin{document}
+\noindent
+\large\textbf{SOEN 6011 SEP} \hfill \textbf{Mahavir Patel} \\
+\normalsize Problem 5 \hfill \textbf{40198619} \\
+Function 6 :  $B(x,y)$ Beta Function \hfill Date: 05/07/2022 \\
+
+\section*{Requirements Traceability}
+Here given below is the JUnit test case report to check all the requirement has been satisfied.
+\subsection*{1. Test Case}
+    \begin{itemize}
+        \item \textbf{Test Case ID : } TC1
+        \item \textbf{Requirement ID : } FR1, FR2, FR3, FR7
+        \item \textbf{Test Case Method : } testMain()
+        \item \textbf{Description : } The testMain() function verifies if the user has supplied accurate and legitimate inputs. If not it will provide the Error message and handles the exception. It also check the inputs are not zero or negative or string or character. 
+        \item \textbf{Test Inputs : }(9,9), (-4,-4), (-4,0), (1,3)
+        \item \textbf{Test Expected Outcome : }4.570592805886924E-6, Error Message, Error Message, 0.3333333333333333
+        \item \textbf{Test Actual Outcome : }4.570592805886924E-6, Error Message, Error Message,\\ 0.3333333333333333 
+        \item \textbf{Result : }Success
+    \end{itemize}
+
+\subsection*{2. Test Case}
+    \begin{itemize}
+        \item \textbf{Test Case ID : } TC2
+        \item \textbf{Requirement ID : } FR4, FR5, FR7
+        \item \textbf{Test Case Method : } testBetaFunction()
+        \item \textbf{Description : } The testBetaFunction() checks the inputs and and calculate the beta values with the help of gamma beta function relation. 
+        \item \textbf{Test Inputs : }(1,1), (100,1)
+        \item \textbf{Test Expected Outcome : }1, 0.009999999999999998
+        \item \textbf{Test Actual Outcome : }1, 0.009999999999999998 
+        \item \textbf{Result : }Success
+    \end{itemize}
+
+\subsection*{3. Test Case}
+    \begin{itemize}
+        \item \textbf{Test Case ID : } TC3
+        \item \textbf{Requirement ID : } FR4, FR6
+        \item \textbf{Test Case Method : } testBetaFunctionFraction()
+        \item \textbf{Description : }The testBetaFunctionFraction() calculate the beta values for the fractional numbers using the stirling's approximation because  the factorial of the decimal number is not defined.
+        \item \textbf{Test Inputs : }(15.8, 20.8)
+        \item \textbf{Test Expected Outcome : }1.1488056591230658E-11
+        \item \textbf{Test Actual Outcome : }1.1488056591230658E-11
+        \item \textbf{Result : }Success
+    \end{itemize}
+
+\subsection*{4. Test Case}
+    \begin{itemize}
+        \item \textbf{Test Case ID : } TC4
+        \item \textbf{Requirement ID : } FR7
+        \item \textbf{Test Case Method : } testBetaFunctionZero()
+        \item \textbf{Description : }The testBetaFunctionFraction() check the error message and validate the exception if one the input value is zero.
+        \item \textbf{Test Inputs : }(0,0), (0,5), (5,0)
+        \item \textbf{Test Expected Outcome : }Exception and Error Message
+        \item \textbf{Test Actual Outcome : }Exception and Error Message 
+        \item \textbf{Result : }Success
+    \end{itemize}
+    
+\subsection*{5. Test Case}
+    \begin{itemize}
+        \item \textbf{Test Case ID : } TC5
+        \item \textbf{Requirement ID : } FR7
+        \item \textbf{Test Case Method : } testBetaFunctionNegative()
+        \item \textbf{Description : }The testBetaFunctionNegative() check if the negative number is provided then the function does not stop and exception are handled properly. 
+        \item \textbf{Test Inputs : }(-5,-5), (0,-5), (-5,0)
+        \item \textbf{Test Expected Outcome : }Exception and Error Message
+        \item \textbf{Test Actual Outcome : }Exception and Error Message 
+        \item \textbf{Result : }Success
+    \end{itemize}
+    
+\subsection*{6. Test Case}
+    \begin{itemize}
+        \item \textbf{Test Case ID : } TC6
+        \item \textbf{Requirement ID : } FR4, FR5
+        \item \textbf{Test Case Method : } testWholeNumber()
+        \item \textbf{Description : }The test method testWholeNumber() checks the given inputs is whole number or the fraction.  
+        \item \textbf{Test Inputs : }0.12, 789.646, 12.00, 45
+        \item \textbf{Test Expected Outcome : }False, False, True, True
+        \item \textbf{Test Actual Outcome : }False, False, True, True 
+        \item \textbf{Result : }Success
+    \end{itemize}
+
+\end{document}
